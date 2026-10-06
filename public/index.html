@@ -1,0 +1,45 @@
+<!DOCTYPE html>                                    <!-- Declares the document as HTML5 -->
+<html lang="en">                                   <!-- Root element; page language is English -->
+<head>                                             <!-- Head: page information, not displayed -->
+  <meta charset="UTF-8">                           <!-- UTF-8 character encoding -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Makes the page fit mobile screens -->
+  <title>TechFest 2026 - Registration</title>      <!-- Browser tab title; checked by test TC01 -->
+  <link rel="stylesheet" href="style.css">         <!-- Links the external CSS file -->
+</head>                                            <!-- End of head -->
+<body>                                             <!-- Visible content starts -->
+  <div class="container">                          <!-- White card that holds everything -->
+    <h1>TechFest 2026</h1>                         <!-- Main heading; checked by test TC01 -->
+    <p class="sub">Event Registration Form</p>     <!-- Sub-heading -->
+    <form id="regForm" novalidate>                 <!-- The form; novalidate turns off browser checks so JavaScript validates -->
+      <label for="name">Full Name</label>          <!-- Label for the name box -->
+      <input type="text" id="name" placeholder="Enter your full name">       <!-- Name input, id "name" -->
+      <label for="email">Email</label>             <!-- Label for the email box -->
+      <input type="email" id="email" placeholder="name@example.com">         <!-- Email input, id "email" -->
+      <label for="phone">Mobile Number</label>     <!-- Label for the mobile box -->
+      <input type="tel" id="phone" placeholder="10-digit mobile number">     <!-- Mobile input, id "phone" -->
+      <label for="college">College</label>         <!-- Label for the college box -->
+      <input type="text" id="college" placeholder="College name">            <!-- College input, id "college" -->
+      <label for="event">Select Event</label>      <!-- Label for the drop-down -->
+      <select id="event">                          <!-- Drop-down list of events, id "event" -->
+        <option value="">-- Choose an event --</option>  <!-- Default option with empty value (means nothing chosen) -->
+        <option>Hackathon</option>                 <!-- Event option 1 -->
+        <option>Paper Presentation</option>        <!-- Event option 2 -->
+        <option>Coding Contest</option>            <!-- Event option 3 -->
+        <option>Robotics Workshop</option>         <!-- Event option 4 -->
+      </select>                                    <!-- End of drop-down -->
+      <p id="error" class="error"></p>             <!-- Empty paragraph where error messages appear (red) -->
+      <button type="submit" id="registerBtn">Register</button>  <!-- Submit button, id "registerBtn" -->
+      <button type="reset" class="reset">Clear</button>         <!-- Reset button: clears all inputs; tested by TC10 -->
+    </form>                                        <!-- End of form -->
+    <div id="success" class="success"></div>       <!-- Empty area where the success message appears (green) -->
+
+    <h3>Registered Participants (<span id="count">0</span>)</h3>  <!-- Heading with live count, id "count" -->
+    <table id="regTable">                          <!-- Table listing registrations, id "regTable" -->
+      <thead><tr><th>#</th><th>Name</th><th>Event</th></tr></thead>  <!-- Header row: number, name, event -->
+      <tbody></tbody>                              <!-- Body rows are added by script.js -->
+    </table>                                       <!-- End of table -->
+    <p class="host">Served by: <span id="host">-</span></p>  <!-- Shows which container/pod served the page -->
+  </div>                                           <!-- End of card -->
+  <script src="script.js"></script>                <!-- Loads the JavaScript after the elements exist -->
+</body>                                            <!-- End of body -->
+</html>              

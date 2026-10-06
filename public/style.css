@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }  /* All elements: include padding in width; remove default spacing */
+body {                                          /* Styles for the whole page */
+  font-family: Arial, sans-serif;               /* Use Arial font (fallback: any sans-serif font) */
+  background: linear-gradient(135deg, #4b6cb7, #182848);  /* Diagonal blue gradient background */
+  min-height: 100vh;                            /* Page is at least the full screen height */
+  display: flex; justify-content: center; align-items: center;  /* Flexbox: centre the card horizontally and vertically */
+}                                               /* End of body styles */
+.container {                                    /* The white card */
+  background: #fff; width: 400px; padding: 30px;  /* White background, 400px wide, 30px inner space */
+  border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.3);  /* Rounded corners and a soft shadow */
+}                                               /* End of card styles */
+h1 { text-align: center; color: #182848; }      /* Main heading: centred, dark blue */
+.sub { text-align: center; color: #666; margin-bottom: 20px; }  /* Sub-heading: centred, grey, space below */
+label { display: block; margin-top: 12px; font-weight: bold; font-size: 14px; }  /* Labels on their own line, bold */
+input[type=text], input[type=email], input[type=tel], select {  /* Text, email, phone boxes and the drop-down */
+  width: 100%; padding: 9px; margin-top: 5px;   /* Full width with inner padding and a small gap above */
+  border: 1px solid #ccc; border-radius: 5px;   /* Thin grey border with rounded corners */
+}                                               /* End of input styles */
+button {                                        /* Register and Clear buttons */
+  width: 48%; padding: 10px; margin-top: 18px; border: none;  /* Two buttons fit side by side; no border */
+  border-radius: 5px; background: #4b6cb7; color: #fff; cursor: pointer;  /* Rounded blue buttons, white text, hand cursor */
+}                                               /* End of button styles */
+button.reset { background: #999; }             /* Clear button is grey */
+button:hover { opacity: 0.85; }                 /* Slightly fade a button when the mouse is over it */
+.error { color: red; font-size: 13px; margin-top: 10px; }  /* Error messages in small red text */
+.success { color: green; margin-top: 15px; font-weight: bold; }  /* Success message in bold green */
+h3 { margin-top: 22px; font-size: 16px; color: #182848; }  /* "Registered Participants" heading */
+table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }  /* Full-width table, single borders */
+th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }  /* Cell borders, padding, left-aligned text */
+th { background: #eef1f8; }                     /* Light blue header cells */
+.host { margin-top: 12px; font-size: 12px; color: #888; text-align: right; }  /* Small grey "Served by" text at the right */

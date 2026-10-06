@@ -1,0 +1,20 @@
+# Do not copy local libraries; the image installs its own with npm install
+node_modules
+# Do not copy npm error logs
+npm-debug.log
+
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python bytecode and caches
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Git metadata
+.git
+.gitignore

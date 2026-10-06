@@ -1,0 +1,12 @@
+{
+  "name": "event-registration-app",
+  "version": "1.0.0",
+  "description": "TechFest 2026 event registration app (containerized with Docker)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
